@@ -37,7 +37,7 @@ class CambridgeDictScraper:
     def _get_ipa(html: BeautifulSoup) -> list[IPA]:
         ipa_html = html.find("span", {"class": f"{Region.UK.value} dpron-i"})
         if not ipa_html:
-            return None
+            return []
 
         uk_ipas = []
         us_ipas = []
